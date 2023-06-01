@@ -1,6 +1,7 @@
 * {
     font-family: 'Poppins', sans-serif;
-    margin: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 .mainContainer {
@@ -14,16 +15,16 @@
 
 .left {
     width: 30%;
-    height: 1000px;
+    height: 100%;
     background-color: #282828;
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 2%;
+    border-radius: 0 2% 2% 0;
 }
 .logo {
-    margin-top: 50px;
+    margin-top: 20%;
     cursor: pointer;
 }
 .intro {
@@ -37,88 +38,80 @@
 }
 
 .intro h4 {
-    margin-left: 150px;
+    margin-left: 30%;
 }
 
 .intro p {
-    font-size: 20px;
+    font-size: 15px;
     padding: 10%;
     letter-spacing: 5px;
-    margin-top: 300px;
+    margin-top: 30%;
+    margin-bottom: 100%;
 }
 .right {
     width: 70%;
-    background-color: #fff;
     margin: 3%;
     display: flex;
     flex-direction: column;
     gap: 5%;
 }
 
-.right input {
-    width: 300px;
-    height: 40px;
+.budgetAndIncomeWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
+.budgetAndIncomeWrapper input {
+    width: 90%;
+    height: auto;
+    border: none;
+}
+
+
 .budgetSection {
-    margin-left: 700px;
-    background-color: #4267B2;
+    background-color: #282828;
     border-radius: 10px;
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
     padding: 2%;
 }
 
 .budgetSection label {
     color: #fff;
     font-weight: bold;
-    margin-right: 1%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.budgetSection input {
+    display: block;
+    width: 95%;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+    padding: 0 3%;
 }
 
 .budgetSection button {
-    width: 100px;
+    width: 40%;
     height: 40px;
-    margin-left: 2%;
+    margin-top: 5%;
+    align-self: left;
     background-color: #fff;
-    color: #4267B2;
+    color: #282828;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.incExpWrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.incomeSection {
-    width: 25%;
-    background-color: #c6ffee;
-    border-radius: 10px;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-}
-
-.incomeSection h2 {
-    color: #075E54;
-}
-
-.incomeSection button {
-    width: 70px;
-    height: 50px;
-    margin-top: 15px;
-    margin-left: 75%;
-    background-color: #075E54;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 30px;
-    cursor: pointer;
-}
 .expenseSection {
-    width: 25%;
-    background-color:  #ffdbdb;
+    width: 63%;
+    height: 100%;
+    background-color:  #B00020;
     border-radius: 10px;
     padding: 1%;
     display: flex;
@@ -126,50 +119,49 @@
 }
 
 .expenseSection h2 {
-    color: #FF0000;
+    color: #fff;
+    text-align: center;
 }
 
-.expenseSection button {
-    width: 70px;
+.expenseSection label {
+    color: #fff;
+}
+
+.expenseSection input {
+    width: 90%;
     height: 50px;
+    border: none;
+    font-size: 15px;
+    padding: 0 2%;
+}
+.expenseSection button {
+    width: 20%;
+    height: 50px;
+    margin-top: 5%;
     margin-left: 75%;
-    margin-top: 15px;
-    background-color: #FF0000;
-    color: white;
+    background-color: #fff;
+    color: #282828;
     border: none;
     border-radius: 8px;
-    font-size: 30px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .totalSummary {
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0 10%;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .summaryCard p {
     font-size: 30px;
-}
-
-#setBudget {
-    color: #4267B2;
-}
-
-#totalIncome {
-    color: #25D366;
+    font-weight: bold;
 }
 
 #totalExpense {
     color: #FF0000;
-}
-
-#balanceAmount {
-    color: #075E54;
 }
 
 .transactionsHistory h2 {
@@ -184,7 +176,7 @@
 }
 
 .entryTable thead tr {
-    background-color: #4267B2;
+    background-color: #282828;
     color: #fff;
     text-align: left;
 }
@@ -198,10 +190,20 @@
     border-bottom: 1px solid #dddddd;
 }
 
-.entryTable tbody tr button {
+.entryTable tbody tr #deleteEntryBtn {
     width: 40%;
     margin-right: 15px;
     background-color: #FF0000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.entryTable tbody tr #editEntryBtn {
+    width: 40%;
+    margin-right: 15px;
+    background-color: #282828;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -213,10 +215,23 @@
 }
 
 .entryTable tbody tr:nth-last-of-type() {
-    border-bottom: 2px solid #4267B2;
+    border-bottom: 2px solid #282828;
 }
 
 .entryTable tbody tr.active-row {
     font-weight: bold;
     color: #4267B2;
+}
+
+#reportBtn {
+    width: 100%;
+    height: 40px;
+    margin-top: 5%;
+    align-self: left;
+    background-color: #282828;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;   
 }

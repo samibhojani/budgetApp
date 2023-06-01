@@ -17,7 +17,7 @@
     <div class="mainContainer">
         <div class="left">
             <div class="logo">
-               <a href="https://samibhojani.github.io/smit-portfolio-sami/"> <img src="./images/logo.png" alt="my-logo" height="200px" weight="500px"> </a>
+               <a href="https://samibhojani.github.io/smit-portfolio-sami/"> <img src="./images/logo.png" alt="my-logo" height="150px" weight="400px"> </a>
             </div>
             <div class="intro">
                 <h2>Budget Management App</h2>
@@ -27,29 +27,20 @@
         </div>
         <div class="right">
 
-            <div class="budgetSection">
-            <label for="addBudget">Budget: </label>
-            <input type="number" name="addBudget" id="setBudget" placeholder="Enter your budget here i.e. 10,000/-">
-            <button id="addBudget">Set Budget</button>
-            </div>
-            <div class="incExpWrapper">
+            <div class="budgetAndIncomeWrapper">
 
-            <div class="incomeSection">
-                <h2>Add Income</h2>
-                <label for="incomeType">Income Type</label>
-                <input type="text" name="incomeType" id="incomeType" placeholder="i.e. Salary, Engineering Project, etc.">
-                
-                <label for="descriptionForIncome">Description</label>
-                <input type="text" name="description" id="descriptionForIncome">
-
-                <label for="incomeAmount">Add Amount</label>
-                <input type="text" name="amount" id="incomeAmount">
-
-                <button id="addIncome">+</button>
-            </div>
-
+                <div class="budgetSection">
+                    <label for="addBudget">Add Monthly Budget </label>
+                    <input type="number" name="addBudget" id="addBudget" placeholder="Enter your budget here i.e. 10,000/-">
+                    <button id="setBudgetBtn">Set Budget</button>
+                </div>
+        
             <div class="expenseSection">
                 <h2>Add Expense</h2>
+
+                <label for="expenseDate">Expense Date</label>
+                <input type="date" name="date" id="expenseDate">
+
                 <label for="expenseType">Expense Type</label>
                 <input type="text" name="expenseType" id="expenseType" placeholder="i.e. Groceries, Rent, etc.">
                 
@@ -59,48 +50,38 @@
                 <label for="expenseAmount">Add Amount</label>
                 <input type="text" name="amount" id="expenseAmount">
 
-                <button id="addExpense">+</button>
+                <button id="addExpenseBtn">Add Expense</button>
             </div>
 
-            
+            </div>
             <div class="totalSummary">
+                <div class="summaryCard">
+                        <h4>Budget</h4>
+                        <p id="displayBudget">0 </p> <span><strong> PKR</strong></span>
+                    </div>
+    
+                <div class="summaryCard">
+                        <h4>Expense</h4>
+                        <p id="totalExpense">0</p> <span style="color: #FF0000;"><strong> PKR</strong></span>
+                    </div>
+    
+                    <div class="summaryCard">
+                        <h4>Balance</h4>
+                        <p id="balanceAmount">0</p>  <span><strong> PKR</strong></span>
+                    </div>
                 
-                <div class="summaryCard">
-                    <h4>Budget</h4>
-                    <p id="setBudget">0.00 PKR</p>
                 </div>
-
-                <div class="summaryCard">
-                    <h4>Income</h4>
-                    <p id="totalIncome">0.00 PKR</p>
-                </div>
-
-                <div class="summaryCard">
-                    <h4>Expense</h4>
-                    <p id="totalExpense">0.00 PKR</p>
-                </div>
-
-                <div class="summaryCard">
-                    <h4>Balance</h4>
-                    <p id="balanceAmount">0.00 PKR</p>
-                </div>
-
-            </div>
-
-
-            </div>
-
 
             <div class="transactionsHistory">
                 <h2>Transactions History</h2>
                 <table class="entryTable">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Type</th>
+                            <th>Expense Date</th>
+                            <th>Expense Type</th>
                             <th>Description</th>
                             <th>Amount</th>
-                            <th>Actions</th>
+                            <th colspan="2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -109,10 +90,15 @@
                             <td>Salary</td>
                             <td>Monthly Income</td>
                             <td>50,000 PKR</td>
-                            <td><button id="deleteEntry">Delete</button></td>
+
+                            <td><button id="editEntryBtn">Edit</button></td>
+                            <td><button id="deleteEntryBtn">Delete</button></td>
+                            
                         </tr>
                     </tbody>
                 </table>
+
+                <button id="reportBtn">Generate Report</button>
             </div>
         </div>
     </div>
