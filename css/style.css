@@ -191,7 +191,7 @@
 }
 
 .entryTable tbody tr #deleteEntryBtn {
-    width: 40%;
+    width: 100%;
     margin-right: 15px;
     background-color: #FF0000;
     border: none;
@@ -201,26 +201,13 @@
 }
 
 .entryTable tbody tr #editEntryBtn {
-    width: 40%;
+    width: 100%;
     margin-right: 15px;
     background-color: #282828;
     border: none;
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
-}
-
-.entryTable tbody tr:nth-of-type(even) {
-    color: #f3f3f3;
-}
-
-.entryTable tbody tr:nth-last-of-type() {
-    border-bottom: 2px solid #282828;
-}
-
-.entryTable tbody tr.active-row {
-    font-weight: bold;
-    color: #4267B2;
 }
 
 #reportBtn {
