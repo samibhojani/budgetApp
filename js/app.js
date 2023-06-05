@@ -23,7 +23,6 @@ function getExpense() {
     const expAmount = +document.getElementById("expenseAmount").value
     const expenseBox = document.getElementById("totalExpense")
     const expTableEntries = document.getElementById("expTableEntries")
-    const balanceAmount = document.getElementById("balanceAmount")
 
     expenseBox.innerText = +expenseBox.innerText + expAmount
     
@@ -51,10 +50,8 @@ function getExpense() {
     
     `
 
-
-
-    // Calculating Balance will add later   
-
 }
 
 document.getElementById("addExpenseBtn").onclick = getExpense
+
+
