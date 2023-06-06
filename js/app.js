@@ -43,7 +43,6 @@ function getExpense() {
     <td>${expAmount}</td>
 
 
-    <td><button id="editEntryBtn">Edit</button></td>
     <td><button id="deleteEntryBtn">Delete</button></td>
 
     </tr>
