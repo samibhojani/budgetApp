@@ -1,12 +1,22 @@
 
 // Add budget in summary
 
+function calcBalance() {
+    const currentBudget = parseInt(document.getElementById("displayBudget").innerText);
+    const currentExpense = parseInt(document.getElementById("totalExpense").innerText);
+    const currentBalance = document.getElementById("balanceAmount")
+
+    currentBalance.innerText = currentBudget - currentExpense
+}
 function getBudget() {
     const addBudget = document.getElementById("addBudget").value;
     document.getElementById("displayBudget").innerHTML = addBudget;
+    calcBalance()
 }
 
 document.getElementById("setBudgetBtn").onclick = getBudget
+
+
 
 
 
@@ -25,7 +35,7 @@ function getExpense() {
     const expTableEntries = document.getElementById("expTableEntries")
 
     expenseBox.innerText = +expenseBox.innerText + expAmount
-    
+
     arrOfTableEntries.push({
         expDate,
         expType,
@@ -48,9 +58,10 @@ function getExpense() {
     </tr>
     
     `
-
+    calcBalance()
 }
 
 document.getElementById("addExpenseBtn").onclick = getExpense
+
 
 
