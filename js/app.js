@@ -1,5 +1,9 @@
 
 // Add budget in summary
+const expDateInput = document.getElementById("expenseDate")
+    const expTypeInput = document.getElementById("expenseType")
+    const expDescInput = document.getElementById("descriptionForExpense")
+    const expAmountInput = document.getElementById("expenseAmount");
 
 function calcBalance() {
     const currentBudget = parseInt(document.getElementById("displayBudget").innerText);
@@ -27,10 +31,10 @@ document.getElementById("setBudgetBtn").onclick = getBudget
 let arrOfTableEntries = []
 
 function getExpense() {
-    const expDate = document.getElementById("expenseDate").value
-    const expType = document.getElementById("expenseType").value
-    const expDesc = document.getElementById("descriptionForExpense").value
-    const expAmount = +document.getElementById("expenseAmount").value
+    const expDate=expDateInput.value;
+    const expType=expTypeInput.value;
+    const expDesc=expDescInput.value;
+    const expAmount=+expAmountInput.value;
     const expenseBox = document.getElementById("totalExpense")
     const expTableEntries = document.getElementById("expTableEntries")
 

@@ -37,18 +37,25 @@
         
             <div class="expenseSection">
                 <h2>Add Expense</h2>
+                <div>
+                    <label for="expenseDate">Expense Date</label>
+                <input type="date" name="date" id="expenseDate" required>
+                </div>
 
-                <label for="expenseDate">Expense Date</label>
-                <input type="date" name="date" id="expenseDate">
-
-                <label for="expenseType">Expense Type</label>
-                <input type="text" name="expenseType" id="expenseType" placeholder="i.e. Groceries, Rent, etc.">
+                <div>
+                    <label for="expenseType">Expense Type</label>
+                <input type="text" name="expenseType" id="expenseType" placeholder="i.e. Groceries, Rent, etc." required>
+                </div>
                 
-                <label for="descriptionForExpense">Description</label>
-                <input type="text" name="description" id="descriptionForExpense">
-
-                <label for="expenseAmount">Add Amount</label>
-                <input type="text" name="amount" id="expenseAmount">
+                <div>
+                    <label for="descriptionForExpense">Description</label>
+                <input type="text" name="description" id="descriptionForExpense" placeholder="rent FMO May, 23" required>
+                 
+                </div> 
+                <div>
+                    <label for="expenseAmount">Add Amount</label>
+                <input type="text" name="amount" id="expenseAmount" placeholder="10,00,000" required>
+                </div>
 
                 <button id="addExpenseBtn">Add Expense</button>
             </div>
